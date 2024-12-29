@@ -1,16 +1,16 @@
 ### SYNCHRONOUS-UP-COUNTER
 
-**AIM:**
+## AIM:
 
 To implement 4 bit synchronous up counter and validate functionality.
 
-**SOFTWARE REQUIRED:**
+## SOFTWARE REQUIRED:
 
 Quartus prime
 
-**THEORY**
+## THEORY
 
-**4 bit synchronous UP Counter**
+## 4 bit synchronous UP Counter
 
 If we enable each J-K flip-flop to toggle based on whether or not all preceding flip-flop outputs (Q) are “high,” we can obtain the same counting sequence as the asynchronous circuit without the ripple effect, since each flip-flop in this circuit will be clocked at exactly the same time:
 
@@ -25,9 +25,7 @@ Otherwise, the J and K inputs for that flip-flop will both be “low,” placing
 Since the first (LSB) flip-flop needs to toggle at every clock pulse, its J and K inputs are connected to Vcc or Vdd, where they will be “high” all the time.
 The next flip-flop need only “recognize” that the first flip-flop’s Q output is high to be made ready to toggle, so no AND gate is needed.
 However, the remaining flip-flops should be made ready to toggle only when all lower-order output bits are “high,” thus the need for AND gates.
-
-**Procedure**
-
+## Procedure
 1.Initialize the shift register to a known state (e.g., all zeros).
 
 2.Input a bit serially into the shift register.
@@ -38,7 +36,8 @@ However, the remaining flip-flops should be made ready to toggle only when all l
 
 5.Repeat steps 2-4 for each bit you want to input and shift
 
-**PROGRAM**
+
+## PROGRAM
 ~~~
 module exp11(out,clk,rstn);
 input clk,rstn;
@@ -54,20 +53,26 @@ endmodule
 ~~~
 
 
+
 ## Developed by: Mourya G
 ## RegisterNumber:24006288
 
 
-**RTL LOGIC UP COUNTER**
-![Screenshot 2024-12-25 191958](https://github.com/user-attachments/assets/e5e8d7c2-9161-45a3-8111-6a95ea8775b5)
+## RTL LOGIC UP COUNTER
+![Screenshot 2024-12-29 182822](https://github.com/user-attachments/assets/7f3d3149-06b0-4872-b860-536d86896324)
 
 
-**TIMING DIAGRAM FOR IP COUNTER**
-![Screenshot 2024-12-25 192048](https://github.com/user-attachments/assets/e01be293-e886-4b47-9ab1-0aeb1c1b7b99)
 
 
-**TRUTH TABLE**
-![Screenshot 2024-12-25 193938](https://github.com/user-attachments/assets/297a741e-7ab6-4e27-9fdf-6b09f50921e7)
+## TIMING DIAGRAM FOR IP COUNTER
+![Screenshot 2024-12-29 182918](https://github.com/user-attachments/assets/b62de46d-e98a-47c5-b8f3-5f26930aafc5)
+
+
+
+
+## TRUTH TABLE
+![Screenshot 2024-12-29 182846](https://github.com/user-attachments/assets/e8f7fe76-2b5a-48df-ae9d-565780c003a2)
+
 
 
 **RESULTS**
